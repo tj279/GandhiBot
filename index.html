@@ -233,7 +233,7 @@
             <div class="api-url-container">
                 <p>Enter your gesture detection API URL:</p>
                 <input type="text" id="api-url" placeholder="https://your-ngrok-url.ngrok-free.app" 
-                       value="https://c213-103-118-50-124.ngrok-free.app">
+                       value="http://13.235.78.38:5000/">
                 <button id="save-api-btn">Save</button>
             </div>
         </div>
@@ -259,23 +259,23 @@
         let bluetoothCharacteristic = null;
         let lastSentCommand = "";
         let isConnected = false;
-        let API_URL = 'http://13.235.78.38:5000/'; // Default API URL
+        let API_URL = 'http://13.235.78.38:5000'; // Default API URL
         let processingActive = false;
         
         // Initialize API URL from localStorage if available
         document.addEventListener('DOMContentLoaded', function() {
             const savedUrl = localStorage.getItem('gestureApiUrl');
             if (savedUrl) {
-                API_URL = savedUrl;
-                document.getElementById('api-url').value = savedUrl;
+                API_URL = "http://13.235.78.38:5000";
+                document.getElementById('api-url').value = "http://13.235.78.38:5000";
             }
             
             // Save API URL button handler
             document.getElementById('save-api-btn').addEventListener('click', function() {
                 const newUrl = document.getElementById('api-url').value.trim();
                 if (newUrl) {
-                    API_URL = newUrl;
-                    localStorage.setItem('gestureApiUrl', newUrl);
+                    API_URL = "http://13.235.78.38:5000";
+                    localStorage.setItem('gestureApiUrl', "http://13.235.78.38:5000");
                     alert('API URL saved!');
                 }
             });
