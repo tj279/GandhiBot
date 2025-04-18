@@ -259,15 +259,15 @@
         let bluetoothCharacteristic = null;
         let lastSentCommand = "";
         let isConnected = false;
-        let API_URL = 'http://13.235.78.38:5000'; // Default API URL
+        let API_URL = 'https://secondmeow.duckdns.org/'; // Default API URL
         let processingActive = false;
         
         // Initialize API URL from localStorage if available
         document.addEventListener('DOMContentLoaded', function() {
             const savedUrl = localStorage.getItem('gestureApiUrl');
             if (savedUrl) {
-                API_URL = "http://13.235.78.38:5000";
-                document.getElementById('api-url').value = "http://13.235.78.38:5000";
+                API_URL = "https://secondmeow.duckdns.org/";
+                document.getElementById('api-url').value = "https://secondmeow.duckdns.org/";
             }
             
             // Save API URL button handler
@@ -275,7 +275,7 @@
                 const newUrl = document.getElementById('api-url').value.trim();
                 if (newUrl) {
                     API_URL = "http://13.235.78.38:5000";
-                    localStorage.setItem('gestureApiUrl', "http://13.235.78.38:5000");
+                    localStorage.setItem('gestureApiUrl', "https://secondmeow.duckdns.org/");
                     alert('API URL saved!');
                 }
             });
